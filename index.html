@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- saved from url=(0025)http://gogolev.net/chess/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+  <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+
+  <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+  <style lang="en" type="text/css" id="dark-mode-native-style"></style>
+  <style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+  <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Случайная клетка шахматной доски</title>
+
+  	<link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <script type="text/javascript" src="./src/main.js"></script>
+    <script type="text/javascript" src="./lib/jquery.js"></script>
+    <script type="text/javascript" src="./src/chess.js"></script>
+  </head>
+
+  <body style="">
+
+    <center>
+      <div class="cardmain">
+        <h1>Тренируем шахматную нотацию</h1>
+
+        <div id="cell" style="text-align: center; font-size: 128px; margin: -20px 0 0 0;"></div>
+
+        <ol>
+          <li>Где находится клетка?</li>
+          <li>Какого она цвета?</li>
+          <li>Какие диагонали проходят через эту клетку?</li>
+        </ol>
+        
+        <div id="v1" class="prompt"><a href="http://gogolev.net/chess/">Ответ 1</a></div>
+        <div id="v2" class="prompt"><a href="http://gogolev.net/chess/">Ответ 1-2</a></div>
+        <div id="v3" class="prompt"><a href="http://gogolev.net/chess/">Ответ 1-3</a></div>
+
+        <div style="clear: both;"></div>
+
+        <div id="s2" class="solution"><p></p></div>
+        <div id="s3" class="solution"><p><span id="d1"></span> <span id="d2"></span></p></div>
+        
+
+        <div id="s1" class="box">
+          <div class="centered">
+            <table class="chess-board">
+             <tbody>
+              <tr>
+               <th>8</th>
+               <td id="a8"></td>
+               <td id="b8"></td>
+               <td id="c8"></td>
+               <td id="d8"></td>
+               <td id="e8"></td>
+               <td id="f8"></td>
+               <td id="g8"></td>
+               <td id="h8"></td>
+              </tr>
+              <tr>
+               <th>7</th>
+               <td id="a7"></td>
+               <td id="b7"></td>
+               <td id="c7"></td>
+               <td id="d7"></td>
+               <td id="e7"></td>
+               <td id="f7"></td>
+               <td id="g7"></td>
+               <td id="h7"></td>
+              </tr>
+              <tr>
+               <th>6</th>
+               <td id="a6"></td>
+               <td id="b6"></td>
+               <td id="c6"></td>
+               <td id="d6"></td>
+               <td id="e6"></td>
+               <td id="f6"></td>
+               <td id="g6"></td>
+               <td id="h6"></td>
+              </tr>
+              <tr>
+               <th>5</th>
+               <td id="a5"></td>
+               <td id="b5"></td>
+               <td id="c5"></td>
+               <td id="d5"></td>
+               <td id="e5"></td>
+               <td id="f5"></td>
+               <td id="g5"></td>
+               <td id="h5"></td>
+              </tr>
+              <tr>
+               <th>4</th>
+               <td id="a4"></td>
+               <td id="b4"></td>
+               <td id="c4"></td>
+               <td id="d4"></td>
+               <td id="e4"></td>
+               <td id="f4"></td>
+               <td id="g4"></td>
+               <td id="h4"></td>
+              </tr>
+              <tr>
+               <th>3</th>
+               <td id="a3"></td>
+               <td id="b3"></td>
+               <td id="c3"></td>
+               <td id="d3"></td>
+               <td id="e3"></td>
+               <td id="f3"></td>
+               <td id="g3"></td>
+               <td id="h3"></td>
+              </tr>
+              <tr>
+               <th>2</th>
+               <td id="a2"></td>
+               <td id="b2"></td>
+               <td id="c2"></td>
+               <td id="d2"></td>
+               <td id="e2"></td>
+               <td id="f2"></td>
+               <td id="g2"></td>
+               <td id="h2"></td>
+              </tr>
+              <tr>
+               <th>1</th>
+               <td id="a1"></td>
+               <td id="b1"></td>
+               <td id="c1"></td>
+               <td id="d1"></td>
+               <td id="e1"></td>
+               <td id="f1"></td>
+               <td id="g1"></td>
+               <td id="h1"></td>
+              </tr>
+              <tr>
+               <th></th>
+               <th>a</th>
+               <th>b</th>
+               <th>c</th>
+               <th>d</th>
+               <th>e</th>
+               <th>f</th>
+               <th>g</th>
+               <th>h</th>
+              </tr>
+             </tbody>
+            </table>
+        
+          </div>
+        </div>
+
+      </div>
+    </center>
+
+    <div class="down">
+      <p>На ПК проверяйте ответы нажатием пробела или клавиш <b>1</b>-<b>3</b>. <b>4</b>-<b>5</b> показывает только диагонали, <b>6</b> — обновление страницы. <b>~</b> — отображение обозначения клеток шахматной доски.</p>
+      <p>Описание тренировки: выдаётся случайная клетка шахматной доски, попробуйте ответить верно на три вопроса с закрытыми глазами.</p>
+      <p>Автор идеи и оригинала: Гоголев</p>
+      <p>Ссылка на оригинал: <a href="http://gogolev.net/chess/">Случайная клетка шахматной доски</a></p>
+    </div>
+
+  </body>
+</html>
